@@ -1,0 +1,299 @@
+﻿.Poppins-Font {
+    font-family: "Popppins";
+}
+
+.hidden { display: none; }
+
+.login-container {
+    margin: auto;
+    background-color: rgba(255,255,255,0.13);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 10px white;
+    border-radius: 5%;
+    height: 75%;
+    width: 30%;
+}
+
+.login-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+    .login-content > label {
+        font-family:"Poppins", sans-serif;
+        color: white;
+        font-size: 2rem;
+        font-weight: 500;
+        margin-top: .5rem;
+    }
+
+.user-pass-layout {
+    height: 50%;
+    width: 95%;
+    margin: 5rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+}
+    .user-pass-layout > label {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.2rem;
+        color: white;
+    }
+
+    .user-pass-layout > input {
+        height: 25%;
+        width: 70%;
+        border: 0;
+        border-bottom: 2px solid rgba(255,255,255,0.1);
+        outline: 0;
+        margin: 8px 0 2rem 0;
+        font-family: "Poppins", sans-serif;
+        font-size: 1rem;
+        color: white;
+        padding-left: 4rem;
+        transition: border-bottom 0.3s ease;
+    }
+
+    .user-pass-layout > input:focus {
+        border-bottom: 2px solid white;
+    }
+
+    #username {
+        background: transparent url('Gallery/UserLogin/username.svg') no-repeat left center;
+        background-size: 10% auto;
+        transition: background 0.3s ease;
+    }
+        #username:focus {
+            background: transparent url('Gallery/UserLogin/username-white.svg') no-repeat left center;
+            background-size: 10% auto;
+        }
+
+    #password {
+        background: transparent url('Gallery/UserLogin/password.svg') no-repeat left center;
+        background-size: 10% auto;
+        transition: background 0.3s ease;
+    }
+        #password:focus {
+            background: transparent url('Gallery/UserLogin/password-white.svg') no-repeat left center;
+            background-size: 10% auto;
+        }
+
+.signup-button-layout {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding-left: 5rem;
+}
+    .signup-button-layout > label{
+        font-family: "Poppins", sans-serif;
+        font-size: 1rem;
+        color: white;
+    }
+    .signup-button {
+        background: transparent;
+        height: 100%;
+        width: auto;
+        padding-left: 0.5rem;
+        display: flex;
+        align-items: center;
+        border: 0;
+        font-family: "Poppins", sans-serif;
+        font-size: 1rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    .signup-button:hover {
+        color: skyblue;
+    }
+
+.signup-content {
+    background-color: yellow;
+    background-color: rgba(255,255,255,0.13);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 10px white;
+    border-radius: 2%;
+    width: 40%;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    overflow: hidden;
+    animation: ease-in 1s;
+}
+    @keyframes ease-in {
+        0% {
+            transform: translate(-50%, 100%);
+        }
+
+        100% {
+            transform: translate(-50%, -50%);
+        }
+    }
+
+.signup-content-close {
+    background-color: yellow;
+    background-color: rgba(255,255,255,0.13);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 10px white;
+    border-radius: 2%;
+    width: 40%;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    overflow:hidden;
+    animation: ease-out 1s;
+}
+    @keyframes ease-out {
+        0% {
+            transform: translate(-50%, -50%);
+        }
+        100% {
+            transform: translate(-50%, 100%);
+        }
+    }
+
+.signup-layout {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+    #title-label {
+        margin: .5rem auto 1rem auto;
+        font-family: "Poppins", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: white;
+    }
+.signup-content-layout {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2rem;
+}
+    .signup-content-layout > label {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.2rem;
+        color: white
+    }
+
+    .signup-content-layout > input {
+        height: 10%;
+        width: 70%;
+        border: 0;
+        border-bottom: 2px solid rgba(255,255,255,0.1);
+        outline: 0;
+        margin: 8px 0 2rem 0;
+        font-family: "Poppins", sans-serif;
+        font-size: 1rem;
+        color: white;
+        padding-left: 3rem;
+        transition: border-bottom 0.3s ease;
+    }
+        .signup-content-layout > input:focus {
+            border-bottom: 2px solid white;
+        }
+        #signup-username {
+            background: transparent url('Gallery/UserLogin/username.svg') no-repeat left center;
+            background-size: 5% auto;
+            transition: background 0.3s ease;
+        }
+            #signup-username:focus {
+                background: transparent url('Gallery/UserLogin/username-white.svg') no-repeat left center;
+                background-size: 5% auto;
+            }
+
+        #signup-password {
+            background: transparent url('Gallery/UserLogin/password.svg') no-repeat left center;
+            background-size: 5% auto;
+            transition: background 0.3s ease;
+        }
+            #signup-password:focus {
+                background: transparent url('Gallery/UserLogin/password-white.svg') no-repeat left center;
+                background-size: 5% auto;
+            }
+
+        #signup-confirm-password {
+            background: transparent url('Gallery/UserLogin/password.svg') no-repeat left center;
+            background-size: 5% auto;
+            transition: background 0.3s ease;
+        }
+            #signup-confirm-password:focus {
+                background: transparent url('Gallery/UserLogin/password-white.svg') no-repeat left center;
+                background-size: 5% auto;
+            }
+
+        #signup-email {
+            background: transparent url('Gallery/UserLogin/email.svg') no-repeat left center;
+            background-size: 5% auto;
+            transition: background 0.3s ease;
+        }
+            #signup-email:focus {
+                background: transparent url('Gallery/UserLogin/email-white.svg') no-repeat left center;
+                background-size: 5% auto;
+            }
+
+    .proceed-to-login-layout {
+        display: flex;
+        flex-direction: row;
+        height: 10%;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+        .proceed-to-login-layout > label {
+            font-family: "Poppins", sans-serif;
+            font-size: 1rem;
+            margin-left: 2rem;
+            color: white;
+        }
+        
+        #proceed-to-loginBtn {
+            background: transparent;
+            border: 0;
+            margin-bottom: auto;
+            font-family: "Poppins", sans-serif;
+            font-size: 1rem;
+            color: white;
+            cursor: pointer;
+        }
+
+        #proceed-to-loginBtn:hover {
+            color: skyblue;
+        }
+
+        #confirmBtn {
+            background-color: rgba(255,255,255,0.2);
+            height: 100%;
+            width: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            margin: 0 1rem 0 auto;
+            border:0;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px white;
+            font-family: "Poppins", sans-serif;
+            font-size: 1rem;
+            color: white;
+            cursor: pointer;
+        }
+        #confirmBtn:hover {
+            color:skyblue;
+        }

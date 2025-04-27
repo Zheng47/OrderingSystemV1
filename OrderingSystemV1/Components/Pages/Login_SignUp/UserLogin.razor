@@ -1,0 +1,46 @@
+﻿@layout Layout.LoginLayout
+@page "/user-login"
+@page "/"
+
+@rendermode InteractiveServer
+
+
+@* <button @onclick="ShowLogin">Login</button> *@
+
+<div class="login-container">
+    <div class="login-content ">
+        <label>Login Here</label>
+        <div class="user-pass-layout">
+            <label>Username</label>
+            <input id="username" type="text" placeholder="Enter username" />
+            <label>Password</label>
+            <input id="password" type="password" placeholder="Enter password" />
+        </div>
+        <div class="signup-button-layout">
+            <label>Don't have an account yet?</label>
+            <button @onclick="ShowSignup" class="signup-button">Sign Up.</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="@signUpInterface @showSignup">
+    <div class="signup-layout">
+        <label id="title-label">Create a free account now</label>
+        <div class="signup-content-layout">
+            <label>Username</label>
+            <input id="signup-username" type="text" placeholder="Enter username" />
+            <label>Password</label>
+            <input id="signup-password" type="password" placeholder="Enter password" />
+            <label>Confirm Password</label>
+            <input id="signup-confirm-password" type="password" placeholder="Confirm password" />
+            <label>Email</label>
+            <input id="signup-email" type="email" placeholder="Enter email (Optional)" />
+        </div>
+        <div class="proceed-to-login-layout">
+            <label>Already have an account?</label>
+            <button id="proceed-to-loginBtn" @onclick="CloseSignUp">Login</button>
+            <button id="confirmBtn">Confirm</button>
+        </div>
+    </div>
+</div>
