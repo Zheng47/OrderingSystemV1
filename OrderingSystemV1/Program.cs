@@ -1,4 +1,5 @@
 using OrderingSystemV1.Components;
+using OrderingSystemV1.Components.Database;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
+builder.Services.AddSingleton<Database>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
