@@ -2,29 +2,43 @@
 @page "/user-login"
 @page "/"
 
+@inject OrderingSystemV1.Components.Database.Database Db
 @rendermode InteractiveServer
 
-
-@* <button @onclick="ShowLogin">Login</button> *@
+@* <script>
+    // For toggle password
+    window.togglePassword = () => {
+        const input = document.getElementById('password');
+        if (input) {
+            input.type = input.type === 'password' ? 'text' : 'password';
+        }
+    };
+</script> *@
 
 <div class="login-container">
+<EditForm class="editform-layout" Model="@loginModel" OnValidSubmit="HandleLogin">
     <div class="login-content ">
         <label>Login Here</label>
         <div class="user-pass-layout">
             <label>Username</label>
-            <input id="username" type="text" placeholder="Enter username" />
+            <InputText @bind-Value="loginModel.Username" id="username" placeholder="Enter username"></InputText>
             <label>Password</label>
-            <input id="password" type="password" placeholder="Enter password" />
+            <div>
+            <InputText @bind-Value="loginModel.Password" id="password" type="password" placeholder="Enter password"></InputText>
+            </div>
         </div>
         <div class="signup-button-layout">
             <label>Don't have an account yet?</label>
-            <button @onclick="ShowSignup" class="signup-button">Sign Up.</button>
+            <button type="button" @onclick="ShowSignup" class="proceed-to-signup">Sign Up.</button>
         </div>
+        <button id="login-btn" type="submit">Login</button>
     </div>
+</EditForm>
 </div>
 
 
-<div class="@signUpInterface @showSignup">
+
+<div class="@signUpInterface @hideInterface">
     <div class="signup-layout">
         <label id="title-label">Create a free account now</label>
         <div class="signup-content-layout">
@@ -42,5 +56,12 @@
             <button id="proceed-to-loginBtn" @onclick="CloseSignUp">Login</button>
             <button id="confirmBtn">Confirm</button>
         </div>
+    </div>
+</div>
+
+<div class="@showValidation @hideValidationInterface">
+    <div class="validation-message">
+        <label>Invalid Account!!!</label>
+        <button @onclick="CloseValidationLogin">Try Again</button>
     </div>
 </div>
